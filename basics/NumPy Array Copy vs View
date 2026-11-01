@@ -1,0 +1,21 @@
+# NumPy Array Copy vs View
+
+# 1.Make Copy
+import numpy as np
+
+arr = np.array([1,2,3,4,5])
+y = arr.copy()
+arr[0] = 34
+print(arr)
+print(y)
+print(y.base)
+
+# 2.Make View
+import numpy as np
+
+arr1 = np.array([1,2,3,4,5])
+x = arr1.view()
+arr1[0] = 14
+print(x)
+print(arr1)
+print(x.base)
